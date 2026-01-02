@@ -1,12 +1,15 @@
 {
-    "extends": [
+  "root": true,
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
     "react-app",
     "react-app/jest",
-    "plugin:prettier/recommended"
+    "prettier"
   ],
-    "env":{
-        "browser": true,
-        "node": true,
-        "es6": true 
-    }
+  "rules": {
+    "prettier/prettier": "off"
+  }
 }
