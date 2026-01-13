@@ -10,6 +10,7 @@
 		"react": "^19.2.3",
 		"react-dom": "^19.2.3",
 		"react-scripts": "5.0.1",
+		"styled-components": "^6.3.5",
 		"web-vitals": "^2.1.4"
 	},
 	"scripts": {
@@ -36,7 +37,9 @@
 		"eslint-plugin-prettier": "^5.5.4",
 		"husky": "^9.1.7",
 		"lint-staged": "^16.2.7",
-		"prettier": "^3.7.4"
+		"prettier": "^3.7.4",
+		"typescript": "^5.9.3",
+		"typescript-styled-plugin": "^0.18.3"
 	},
 	"lint-staged": {
 		"src/**/*.{js,jsx,json}": [

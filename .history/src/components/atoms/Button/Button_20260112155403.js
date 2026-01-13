@@ -1,0 +1,33 @@
+import React from 'react';
+import PropTypes from 'prop-types'
+import styled from 'styled-components';
+import { ReactComponent as DeleteIcon } from 'assets/icons/delete-icon.svg';
+
+const StyleButton = styled.button`
+    width: 20px;
+    height: 20px;
+    /* background-color: ${(props) => (props.isSecondary ? '#e7e044' : '#c0c7d6')};
+    border-radius: ${({ isSquare }) => (isSquare ? '0px' : '50px')}; */
+    background-color: #c0c7d6;
+    border-radius: 50px;
+    border: none;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    svg{
+        width: 100%;
+        height: 100%;
+    }
+`;
+
+const button = () => {
+    return (
+        <StyleButton>
+            <DeleteIcon />
+        </StyleButton>
+    )
+}
+
+export default button;
