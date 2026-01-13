@@ -1,0 +1,35 @@
+import React from 'react';
+import PropTypes from 'prop-types'
+import Button from 'components/atoms/Button/Button';
+import { Wrapper, Average, Name, Attendance } from './UsersListItem.styles';
+
+const showIndex = (index) => alert(`To student: #${index + 1}`);
+
+const UsersListItem = ({ index, userData: { average, name, attendance = '0%' } }) => {
+    return (
+        <Wrapper>
+            <Average $value={Number(average)} aria-label="Średnia ocena">
+                {average}
+            </Average>
+
+            <div>
+                <Name>{name}</Name>
+                <Attendance>attendance: {attendance}</Attendance>
+            </div>
+            <Button onclick={() => showIndex(index)} />
+
+
+        </Wrapper>
+    );
+};
+
+
+UsersListItem.propTypes = {
+    userData: PropTypes.shape({
+        average: PropTypes.string.isRequired,
+        name: PropTypes.string.isRequired,
+        attendance: PropTypes.string,
+
+    })
+}
+export default UsersListItem;
